@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-10-09T16:21:37.456Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.61 Safari/537.36" etag="Tn1fP_YzUWHSKvu3oS_v" version="15.5.0" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2021-10-09T16:50:57.589Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.61 Safari/537.36" etag="iS-plMKyA4sqvjugr6-y" version="15.5.0" type="github" pages="2">
   <diagram id="kgpKYQtTHZ0yAKxKKP6v" name="increase memory">
     <mxGraphModel dx="1038" dy="579" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -247,10 +247,10 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="gWDqyThzymgcxsuwWPv7-2" value="podWorker" style="shape=umlLifeline;perimeter=lifelinePerimeter;container=1;collapsible=0;recursiveResize=0;shadow=0;strokeWidth=1;rounded=1;" vertex="1" parent="gWDqyThzymgcxsuwWPv7-1">
-          <mxGeometry x="93" y="138" width="100" height="690" as="geometry" />
+          <mxGeometry x="93" y="138" width="100" height="512" as="geometry" />
         </mxCell>
         <mxCell id="gWDqyThzymgcxsuwWPv7-3" value="" style="points=[];perimeter=orthogonalPerimeter;shadow=0;strokeWidth=1;rounded=1;" vertex="1" parent="gWDqyThzymgcxsuwWPv7-2">
-          <mxGeometry x="45" y="60" width="10" height="610" as="geometry" />
+          <mxGeometry x="45" y="60" width="10" height="390" as="geometry" />
         </mxCell>
         <mxCell id="gWDqyThzymgcxsuwWPv7-4" value="" style="endArrow=classic;html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;exitX=1.45;exitY=0.796;exitDx=0;exitDy=0;exitPerimeter=0;entryX=1.45;entryY=0.927;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="gWDqyThzymgcxsuwWPv7-2">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
@@ -264,12 +264,12 @@
         </mxCell>
         <mxCell id="gWDqyThzymgcxsuwWPv7-7" value="return" style="verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;shadow=0;strokeWidth=1;exitX=0.5;exitY=0.568;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="gWDqyThzymgcxsuwWPv7-1">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="148" y="596" as="targetPoint" />
-            <mxPoint x="432" y="595.9200000000001" as="sourcePoint" />
+            <mxPoint x="148" y="550.08" as="targetPoint" />
+            <mxPoint x="432" y="550.0000000000001" as="sourcePoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="gWDqyThzymgcxsuwWPv7-9" value="statusManager" style="shape=umlLifeline;perimeter=lifelinePerimeter;container=1;collapsible=0;recursiveResize=0;shadow=0;strokeWidth=1;rounded=1;" vertex="1" parent="gWDqyThzymgcxsuwWPv7-1">
-          <mxGeometry x="382" y="138" width="100" height="690" as="geometry" />
+          <mxGeometry x="382" y="138" width="100" height="512" as="geometry" />
         </mxCell>
         <mxCell id="gWDqyThzymgcxsuwWPv7-6" value="" style="points=[];perimeter=orthogonalPerimeter;shadow=0;strokeWidth=1;rounded=1;" vertex="1" parent="gWDqyThzymgcxsuwWPv7-9">
           <mxGeometry x="45" y="346" width="10" height="114" as="geometry" />
@@ -285,6 +285,9 @@
             <mxPoint x="-232" y="289" as="targetPoint" />
             <mxPoint x="48" y="289" as="sourcePoint" />
           </mxGeometry>
+        </mxCell>
+        <mxCell id="fVVzHDutnqykXt9v4WO_-14" value="" style="points=[];perimeter=orthogonalPerimeter;shadow=0;strokeWidth=1;rounded=1;" vertex="1" parent="gWDqyThzymgcxsuwWPv7-9">
+          <mxGeometry x="50" y="403" width="10" height="48" as="geometry" />
         </mxCell>
         <mxCell id="gWDqyThzymgcxsuwWPv7-14" value="" style="endArrow=classic;html=1;entryX=-0.24;entryY=0.031;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="gWDqyThzymgcxsuwWPv7-1" target="gWDqyThzymgcxsuwWPv7-10">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
@@ -332,6 +335,32 @@
         </mxCell>
         <mxCell id="fVVzHDutnqykXt9v4WO_-13" value="send sync request to podStatusChannel" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="gWDqyThzymgcxsuwWPv7-1">
           <mxGeometry x="470" y="500" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="fVVzHDutnqykXt9v4WO_-15" value="api server" style="shape=umlLifeline;perimeter=lifelinePerimeter;container=1;collapsible=0;recursiveResize=0;shadow=0;strokeWidth=1;rounded=1;" vertex="1" parent="gWDqyThzymgcxsuwWPv7-1">
+          <mxGeometry x="660" y="138" width="100" height="512" as="geometry" />
+        </mxCell>
+        <mxCell id="fVVzHDutnqykXt9v4WO_-16" value="" style="points=[];perimeter=orthogonalPerimeter;shadow=0;strokeWidth=1;rounded=1;" vertex="1" parent="fVVzHDutnqykXt9v4WO_-15">
+          <mxGeometry x="45" y="400" width="10" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="fVVzHDutnqykXt9v4WO_-19" value="return" style="verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;shadow=0;strokeWidth=1;" edge="1" parent="gWDqyThzymgcxsuwWPv7-1">
+          <mxGeometry x="0.0231" y="21" relative="1" as="geometry">
+            <mxPoint x="443" y="589" as="targetPoint" />
+            <mxPoint x="703" y="589" as="sourcePoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="fVVzHDutnqykXt9v4WO_-21" value="" style="endArrow=classic;html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;exitX=1;exitY=0.042;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="gWDqyThzymgcxsuwWPv7-1" source="fVVzHDutnqykXt9v4WO_-14">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="500" y="370" as="sourcePoint" />
+            <mxPoint x="710" y="543" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="630" y="543" />
+              <mxPoint x="630" y="543" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="fVVzHDutnqykXt9v4WO_-22" value="PatchPodStatus" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="gWDqyThzymgcxsuwWPv7-1">
+          <mxGeometry x="530" y="550" width="100" height="20" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
