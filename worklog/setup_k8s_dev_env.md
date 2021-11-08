@@ -255,7 +255,7 @@ kube_install
 #### Deploy the PR binary and check the version
 
 ```sh
-cd cd $GOPATH/src/k8s.io/kubernetes
+cd $GOPATH/src/k8s.io/kubernetes/_output/bin/
 sudo cp kubelet /usr/bin/kubelet
 sudo cp kubeadm /usr/bin/kubeadm
 sudo cp kubectl /usr/bin/kubectl
