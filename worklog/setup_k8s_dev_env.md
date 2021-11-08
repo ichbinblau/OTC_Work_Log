@@ -314,10 +314,10 @@ EOF
   sudo chown $(id -u):$(id -g) $HOME/.kube/config
   # let master also be a work node
   kubectl taint nodes --all node-role.kubernetes.io/master-
-  nodename=$(kubectl get node -o jsonpath='{.items[0].metadata.name}')
+  # nodename=$(kubectl get node -o jsonpath='{.items[0].metadata.name}')
   # kubectl taint node $nodename node-role.kubernetes.io/master:NoSchedule-
-  kubectl label --overwrite node $nodename ovn4nfv-k8s-plugin=ovn-control-plane
-  kubectl create namespace sdewan-system
+  # kubectl label --overwrite node $nodename ovn4nfv-k8s-plugin=ovn-control-plane
+  # kubectl create namespace sdewan-system
 
   # kubectl autocomplete
   cat <<EOF | sudo tee ~/.alias
@@ -328,7 +328,7 @@ EOF
   echo 'source ~/.alias' >>~/.bashrc
 
   # helm install
-  sudo snap install helm --classic
+  # sudo snap install helm --classic
 }
 k8s_init
 ```
