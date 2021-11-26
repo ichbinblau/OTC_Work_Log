@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2021-11-23T09:33:22.278Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36" etag="MW2C9TqUr-vz7WegAU6Y" version="15.8.2" type="github" pages="4">
+<mxfile host="app.diagrams.net" modified="2021-11-26T02:28:48.633Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36" etag="hLYBqFxlZCbiTIrECZM5" version="15.8.2" type="github" pages="4">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="webhook">
-    <mxGraphModel dx="2630" dy="737" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="2630" dy="794" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-0" />
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-1" parent="WIyWlLk6GJQsqaUBKTNV-0" />
@@ -118,8 +118,8 @@
         <mxCell id="D11Lsd8FtJEgQ72NZcWx-3" value="&lt;h1&gt;&lt;font color=&quot;#000000&quot;&gt;Pros&lt;/font&gt;&lt;/h1&gt;&lt;p&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;font color=&quot;#000000&quot;&gt;Easy to implement&amp;nbsp;&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font color=&quot;#000000&quot;&gt;Very few changes to k8s source. No change to k8s object model&lt;/font&gt;&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;/p&gt;&lt;h1&gt;&lt;font color=&quot;#000000&quot;&gt;Cons&lt;/font&gt;&lt;/h1&gt;&lt;p&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;font color=&quot;#000000&quot;&gt;Resource allocation decision&amp;nbsp;is supposed to be made by Scheduler.&amp;nbsp;&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font color=&quot;#000000&quot;&gt;This may lead to a race-condition where kubelet may agree to an update based on its available capacity at the same time when the scheduler is assigning a new pod to that kubelet based on its view of the node capacity.&amp;nbsp;&lt;/font&gt;&lt;span id=&quot;docs-internal-guid-44bf292c-7fff-f98d-9bcf-c16e8a3c23c7&quot;&gt;&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;fontFamily=Helvetica;fontSize=12;fontColor=#FF3333;align=left;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="80" y="610" width="320" height="280" as="geometry" />
         </mxCell>
-        <mxCell id="e4tp4aykjOCGpSkKBqX--0" value="&lt;div style=&quot;text-align: left&quot;&gt;&lt;span&gt;Todo:&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left&quot;&gt;&lt;span&gt;1. for addition, add to container list, set status&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left&quot;&gt;&lt;span&gt;2. scheduler change the status&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left&quot;&gt;&lt;span&gt;3. for deletion: add anno or alter status, sync node resource&lt;/span&gt;&lt;/div&gt;" style="text;html=1;resizable=0;autosize=1;align=center;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;fontFamily=Helvetica;fontSize=12;fontColor=#000000;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="-223" y="461" width="330" height="60" as="geometry" />
+        <mxCell id="e4tp4aykjOCGpSkKBqX--0" value="&lt;div style=&quot;text-align: left&quot;&gt;&lt;span&gt;Todo:&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left&quot;&gt;&lt;span&gt;1. for addition, add to container list, set status. investigate k8s status flow -&amp;gt; diagram&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left&quot;&gt;&lt;span&gt;2. scheduler change the status, how to calculate resource&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left&quot;&gt;&lt;span&gt;3. for deletion: add anno or alter status, sync node resource&lt;/span&gt;&lt;/div&gt;" style="text;html=1;resizable=0;autosize=1;align=center;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;fontFamily=Helvetica;fontSize=12;fontColor=#000000;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="-300" y="446" width="460" height="60" as="geometry" />
         </mxCell>
         <mxCell id="q_yjqkA3QtKpWia2A4fD-0" value="&lt;font style=&quot;font-size: 14px&quot;&gt;Kube Scheduler&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=12;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="719" y="317" width="131" height="83" as="geometry" />
@@ -143,7 +143,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="b5eZfN_mTchJTnmyJi1k" name="annotation">
-    <mxGraphModel dx="2489" dy="794" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="2653" dy="794" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="ITCLSx846kDoq1n6SzYH-0" />
         <mxCell id="ITCLSx846kDoq1n6SzYH-1" parent="ITCLSx846kDoq1n6SzYH-0" />
@@ -243,8 +243,8 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram name="pod attribute" id="Iw5p7GnQtJDobvQ6vwvw">
-    <mxGraphModel dx="852" dy="-79" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+  <diagram name="pod attributes" id="Iw5p7GnQtJDobvQ6vwvw">
+    <mxGraphModel dx="852" dy="-39" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="LiKTIXCdsz4_5ox_9OFq-0" />
         <mxCell id="LiKTIXCdsz4_5ox_9OFq-1" parent="LiKTIXCdsz4_5ox_9OFq-0" />
@@ -345,7 +345,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="lKqsShuAqBGbPSmW4KfP" name="container attributes">
-    <mxGraphModel dx="2489" dy="794" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="0" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="2269" dy="579" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="0" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="UvkZxEzqPrCQQuInUelh-0" />
         <mxCell id="UvkZxEzqPrCQQuInUelh-1" parent="UvkZxEzqPrCQQuInUelh-0" />
