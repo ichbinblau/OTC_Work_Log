@@ -35,16 +35,27 @@ function set_proxy_for_docker() {
 [Service]
 Environment="HTTP_PROXY=$intel_http_proxy"
 Environment="HTTPS_PROXY=$intel_http_proxy"
-Environment="NO_PROXY=localhost,127.0.0.0/8,10.293.154.0/16"
+Environment="NO_PROXY=localhost,127.0.0.0/8,10.244.0.0/16"
 EOF
   sudo systemctl daemon-reload
   sudo systemctl restart docker
   echo ">>>>>>>>>>>>>>>>>>>>>>> Set Proxy for Docker <<<<<<<<<<<<<<<<<<<<<<<<<<"
 }
+function set_proxy_for_apt() {
+  cat <<EOF | sudo tee /etc/apt/apt.conf
+Acquire::http::proxy "$intel_http_proxy";
+Acquire::https::proxy "$intel_http_proxy";
+APT { Get { AllowUnauthenticated "1"; }; };
+EOF
+echo ">>>>>>>>>>>>>>>>>>>>>>> Set Proxy for Apt <<<<<<<<<<<<<<<<<<<<<<<<<<"
+}
 #---------------------- Install Container Runtime ------------------------------
 function docker_install() {
 
   # sudo apt remover docker docker-engine docker.io containerd runc
+  if [ $proxy_flag == "on" ]; then
+    set_proxy_for_apt
+  fi
   sudo apt update
   sudo apt install -y docker.io
   sudo usermod -aG docker $USER
@@ -307,6 +318,7 @@ apiVersion: kubelet.config.k8s.io/v1beta1
 cgroupDriver: systemd
 EOF
 
+  sudo swapoff -a
   sudo kubeadm init -v=5 --config=kubeadm-config.yaml
 
   mkdir -p $HOME/.kube
